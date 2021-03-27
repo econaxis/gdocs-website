@@ -7,10 +7,10 @@
     <script src="static/js/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="main.css">
 
-    <script src="static/js/index.js"></script>
+    <script id="gapi-script" src="static/js/gapi.js"></script>
     <script src="static/js/load_test_data.js"></script>
+    <script src="static/js/index.js"></script>
 
-    <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
     <title>Main page</title>
 
 </head>
@@ -21,13 +21,18 @@
     <h3 class="text-center pb-5">View and export your writing analytics</h3>
 </div>
 
-<div class="row align-items-center mx-3 my-3">
-    <img class="col-md mx-2 img-fluid" src="static/newplot(1).png">
-    <img class="col-md mx-2 img-fluid" src="static/newplot.png">
+
+<div class="container mt-5">
+    <div class="row" id="word-count-graph"></div>
+    <div class="row justify-content-end mt-3">
+        <div class="col-2">
+            <button class="btn btn-primary" id="download-csv-button" onclick="export_csv()">Download all edits as CSV</button>
+        </div>
+    </div>
 </div>
-<div class="row mx-3 my-3">
-    <div class="col-md mx-2" id="test-graph"></div>
-    <div class="col-md mx-2" id="test-graph1"></div>
+<div class="d-flex flex-column mx-auto align-items-center text-center">
+    <p class="lead fs-4">Choose a file to view word count history.</p>
+    <button class="btn btn-primary w-25" onclick="loginCallback()">Choose a file</button>
 </div>
 
 <div class="mx-auto col-xl-7 px-1 fs-5 mb-4">
@@ -72,17 +77,10 @@
         <li>Run <code>python get_files.py json.txt</code></li>
         <li>There should be a operations.csv containing the document text at every single revision captured.</li>
     </ol>
-    <p>There's another way to export revisions of a document without the guessing-and-checking of end revision ID.
-        (todo).</p>
-</div>
-<hr/>
-<div class="d-flex flex-column mx-auto align-items-center text-center">
-    <p class="lead fs-4">Click the button to get access to the Google Drive File Picker</p>
-    <button class="btn btn-primary w-25" onclick="loginCallback()">Choose a file</button>
+    <em>If you'd like to just see word count history for one single document, you can do so below. </em>
 </div>
 
-<div class="row mx-3 my-3">
-    <div class="col-md mx-2" id="word-count-graph"></div>
-</div>
 </body>
+
+
 </html>
