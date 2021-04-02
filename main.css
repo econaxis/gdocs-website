@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5 {
     margin-top: 2em;
     margin-bottom: 1em;
 }
+
 #top {
     color: #f1f1f1;
     background: #191c24;
@@ -20,6 +21,49 @@ hr {
     margin-bottom: 3rem;
 }
 
-#download-csv-button {
-    display: none
+.progress#date-progress-bar {
+    /*Override Bootstrap overflow hidden just for this element to show the tick labels -- progress-bar-ticks > p*/
+    overflow: visible;
+}
+
+/*#download-csv-button {*/
+/*    display: none*/
+/*}*/
+#date-progress-bar > .progress-bar-ticks {
+    z-index: 9;
+    position: absolute;
+    left: 25%;
+
+    width: 3px;
+    height: 100%;
+    /* To be set in Javascript to match Plotly grid color */
+    /*background-color: blue;*/
+}
+
+/*The labels for each tick e.g. (1), (2) matching Plotly axis with date progress bar*/
+.progress-bar-ticks > span {
+    position: absolute;
+    top: 110%;
+    white-space: nowrap;
+    transform: translateX(-50%) translateY(200%) rotate(90deg) ;
+}
+
+#date-progress-bar {
+    position: relative;
+}
+
+/*Override bootstrap default transition element.*/
+#date-progress-bar > .progress-bar {
+    transition: width 0.2s linear;
+}
+
+#date-progress-bar > .progress-bar > p {
+    font-size: medium;
+    padding: 0px 3px 0px 3px;
+    margin: auto;
+    z-index: 10;
+}
+
+#date-progress-bar {
+    height: 3em;
 }
