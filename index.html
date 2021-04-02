@@ -4,15 +4,10 @@
     <meta charset="UTF-8"/>
     <link
             rel="stylesheet"
-            href="bootstrap-5.0.0-beta3-dist/css/bootstrap.css"
+            href="static/extern/bootstrap-5.0.0-beta3-dist/css/bootstrap.css"
     />
-    <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.js"></script>
-    <script src="static/js/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="main.css"/>
 
-    <script id="gapi-script" src="static/js/gapi.js"></script>
-    <script src="static/js/load_test_data.js"></script>
-    <script src="static/js/index.js"></script>
 
     <title>Main page</title>
 </head>
@@ -26,21 +21,37 @@
     </h2>
 </div>
 
-<div class="container mt-5" id="interactive-container">
-    <div class="row" id="word-count-graph"></div>
-    <div class="row text-center mt-2 g-0">
-        <div class="progress w-100" id="date-progress-bar">
-            <div class="progress-bar"><p>Date Placeholder</p></div>
+<div class="row">
+    <div class="col-8 m-3" id="interactive-container">
+        <div class="row" id="word-count-graph"></div>
+        <div class="row text-center mt-2 g-0">
+            <div class="progress w-100" id="date-progress-bar">
+                <span>Date Placeholder</span>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="row pt-3" id="bottom-buttons-container">
+            <div class="col text-center">
+                <p class="fs-3">Choose a file to view word count history.</p>
+                <button class="btn btn-primary w-25" onclick="loginCallback()">
+                    Choose a file
+                </button>
+            </div>
+
         </div>
     </div>
-    <div class="row pt-3" id="bottom-buttons-container">
-        <div class="col text-center">
-            <p class="fs-3">Choose a file to view word count history.</p>
-            <button class="btn btn-primary w-25" onclick="loginCallback()">
-                Choose a file
-            </button>
-        </div>
-
+    <div class="col" id="right-panels-controls">
+        <select class="form-select" id="time-interval-selector">
+            <option disabled selected>Time interval between writing sessions</option>
+            <option value="(24 * 60 * 60 * 1000)">24 hours</option>
+            <option value="(4 * 60 * 60 * 1000)">4 hours</option>
+            <option value="(2 * 60 * 60 * 1000)">2 hours</option>
+            <option value="(60 * 60 * 1000)">1 hour</option>
+            <option value="(30 * 60 * 1000)">30 minutes</option>
+            <option value="(5 * 60 * 1000)">5 minutes</option>
+            <option value="(1 * 60 * 1000)">1 minute</option>
+            <option value="(30 * 1000)">30 seconds</option>
+        </select>
     </div>
 </div>
 
@@ -133,4 +144,12 @@
     </em>
 </div>
 </body>
+
+<script src="static/extern/bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.js"></script>
+<script src="static/extern/plotly-latest.min.js"></script>
+<script id="gapi-script" src="static/extern/gapi.js"></script>
+<script src="static/js/load_test_data.js"></script>
+<script src="static/js/index.js"></script>
+<script src="static/js/handle_google_api_picker.js"></script>
+
 </html>

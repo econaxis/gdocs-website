@@ -21,16 +21,11 @@ hr {
     margin-bottom: 3rem;
 }
 
-.progress#date-progress-bar {
-    /*Override Bootstrap overflow hidden just for this element to show the tick labels -- progress-bar-ticks > p*/
-    overflow: visible;
-}
-
 /*#download-csv-button {*/
 /*    display: none*/
 /*}*/
 #date-progress-bar > .progress-bar-ticks {
-    z-index: 9;
+    /*z-index: 9;*/
     position: absolute;
     left: 25%;
 
@@ -50,18 +45,30 @@ hr {
 
 #date-progress-bar {
     position: relative;
+    overflow: visible;
+    background-color: var(--bs-gray);
 }
 
 /*Override bootstrap default transition element.*/
 #date-progress-bar > .progress-bar {
-    transition: width 0.2s linear;
+    transition: transform 0.5s ease;
+    width: 100%;
+    transform-origin: left;
 }
 
-#date-progress-bar > .progress-bar > p {
+
+/* The date label on the progress bar*/
+#date-progress-bar >span  {
     font-size: medium;
-    padding: 0px 3px 0px 3px;
+    padding-left: 0.5em;
+    color: #f2f2f2;
     margin: auto;
-    z-index: 10;
+    z-index: 2;
+    position:absolute;
+    white-space: nowrap;
+
+    top:50%;
+    transform: translateY(-50%);
 }
 
 #date-progress-bar {
