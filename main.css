@@ -40,13 +40,14 @@ hr {
     position: absolute;
     top: 110%;
     white-space: nowrap;
-    transform: translateX(-50%) translateY(200%) rotate(90deg) ;
+    transform: translateX(-50%) ;
 }
 
 #date-progress-bar {
     position: relative;
     overflow: visible;
     background-color: var(--bs-gray);
+    height: 3em;
 }
 
 /*Override bootstrap default transition element.*/
@@ -71,6 +72,12 @@ hr {
     transform: translateY(-50%);
 }
 
-#date-progress-bar {
-    height: 3em;
+@media(max-width: 992px) {
+    #main-text-readme-div > * {
+        font-size: 2em;
+    }
+    #main-text-readme-div > h1 {
+        font-size: 4em;
+    }
 }
+
