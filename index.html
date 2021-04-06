@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <link
-            rel="stylesheet"
-            href="static/extern/bootstrap-5.0.0-beta3-dist/css/bootstrap.css"
+        rel="stylesheet"
+        href="static/extern/bootstrap-5.0.0-beta3-dist/css/bootstrap.css"
     />
-    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="main.css" />
 
 
     <title>1 2 3</title>
@@ -55,9 +55,11 @@
         </select>
 
         <div class="alert alert-primary my-4">
-            Each vertical blue line represents the start of a new writing session. Formally, a writing session ends when there're no edits within a specified time interval (choose which time interval from the drop down above).
+            Each vertical blue line represents the start of a new writing session. Formally, a writing session ends when
+            there're no edits within a specified time interval (choose which time interval from the drop down above).
 
-            The x-axis on the graph represents the progress made on the document. As you hover over each revision, the blue slider shows what time that revision occured at.
+            The x-axis on the graph represents the progress made on the document. As you hover over each revision, the
+            blue slider shows what time that revision occured at.
         </div>
     </div>
 </div>
@@ -85,7 +87,7 @@
         to:
     </p>
     <pre><code>https://docs.google.com/document/d/{file_id}/revisions/load?id={file_id}&amp;<span class="hljs-keyword">start</span>=<span
-            class="hljs-number">1</span>&amp;<span class="hljs-keyword">end</span>={end}
+        class="hljs-number">1</span>&amp;<span class="hljs-keyword">end</span>={end}
 </code></pre>
     <ul>
         <li><code>{file_id}</code> : ID of the Google Docs file</li>
@@ -94,7 +96,7 @@
     <h2 id="finding-the-id">Finding the ID</h2>
     <p>A Google Docs link looks like this:</p>
     <pre><code>https:<span class="hljs-regexp">//</span>docs.google.com<span class="hljs-regexp">/document/</span>d<span
-            class="hljs-regexp">/1b6qJW2miNoYpSAbg/</span>edit
+        class="hljs-regexp">/1b6qJW2miNoYpSAbg/</span>edit
 </code></pre>
     <p>
         The file ID would be anything between the &quot;/d/&quot; and
