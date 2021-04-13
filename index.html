@@ -12,7 +12,7 @@
     <title>1 2 3</title>
 </head>
 <body>
-<div class="py-2 text-center mb-5" id="top">
+<div class="py-2 text-center" id="top">
     <h1 class="text-center pb-2 display-1 px-md-5 px-sm-1">
         Google Docs Dashboard
     </h1>
@@ -21,9 +21,9 @@
     </h2>
 </div>
 
-<div class="row mx-md-3 mx-1">
+<div class="row mx-md-3 mx-1 my-2">
 
-    <div class="col-xl-10 mt-3" id="interactive-container">
+    <div class="col-md-5 mt-3" id="interactive-container">
         <div class="row" id="word-count-graph"></div>
         <div class="row text-center mt-2 g-0">
             <div class="progress w-100" id="date-progress-bar">
@@ -53,19 +53,19 @@
             <option value="(1 * 60 * 1000)">1 minute</option>
             <option value="(30 * 1000)">30 seconds</option>
         </select>
-
-        <div class="alert alert-primary my-4">
+<!-- 
+        <div class="alert alert-primary my-2 p-0">
             Each vertical blue line represents the start of a new writing session. Formally, a writing session ends when
             there're no edits within a specified time interval (choose which time interval from the drop down above).
 
             The x-axis on the graph represents the progress made on the document. As you hover over each revision, the
             blue slider shows what time that revision occured at.
-        </div>
+        </div> -->
+        <div id="primed-notification"></div>
     </div>
 </div>
 
 
-<div id="primed-notification">Priming...</div>
 
 <div class="mx-auto col-xl-6 col-11 mb-md-4" id="main-text-readme-div">
     <h1 id="export-all-google-docs-revisions-as-a-csv-file">
@@ -157,6 +157,7 @@
 <script src="static/extern/bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.js"></script>
 <script src="static/extern/plotly-basic.min.js"></script>
 <script id="gapi-script" src="static/extern/gapi.js"></script>
+<script src="static/js/sleep.js"></script>
 <script src="static/js/load_test_data.js"></script>
 <script src="static/js/index.js"></script>
 <script src="static/js/handle_google_api_picker.js"></script>
