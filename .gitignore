@@ -1,1 +1,5 @@
 .idea
+node_modules
+.eslintrc.js
+package*
+.gitignore
