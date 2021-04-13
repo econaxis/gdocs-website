@@ -7,7 +7,11 @@ h1 {
     font-weight: bold;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin-top: 2em;
     margin-bottom: 1em;
 }
@@ -44,7 +48,7 @@ hr {
     position: absolute;
     top: 110%;
     white-space: nowrap;
-    transform: translateX(-50%) ;
+    transform: translateX(-50%);
 }
 
 #date-progress-bar {
@@ -61,22 +65,21 @@ hr {
     transform-origin: left;
 }
 
-
 /* The date label on the progress bar*/
-#date-progress-bar >span  {
+#date-progress-bar > span {
     font-size: medium;
     padding-left: 0.5em;
     color: #f2f2f2;
     margin: auto;
     z-index: 2;
-    position:absolute;
+    position: absolute;
     white-space: nowrap;
 
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
 }
 
-@media(max-width: 992px) {
+@media (max-width: 992px) {
     #main-text-readme-div > * {
         font-size: 2em;
     }
@@ -91,4 +94,24 @@ hr {
     border-radius: 0.5em;
     margin-top: 1em;
     border: 2px inset rgb(51, 51, 51);
+
+    white-space: pre-line;
+    overflow: scroll;
+    max-height: 60vh;
+
+    transition: background linear 0.3s;
+}
+
+#primed-notification.loading {
+    background: rgb(230, 230, 230);
+}
+
+.insertion-operation {
+    background: rgba(155, 255, 62, 0.322);
+    border-radius: 2px;
+}
+
+.deletion-operation {
+    background: rgba(255, 90, 39, 0.322);
+    border-radius: 2px;
 }
