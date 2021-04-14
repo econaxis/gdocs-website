@@ -26,8 +26,10 @@ hr {
 }
 #word-count-graph {
     /* border-radius: 2px;*/
-    border: 1px inset rgb(51, 51, 51);
+    border: 1px inset rgb(39, 37, 37);
     min-height:70vh;
+    margin: 10px;
+    overflow:hidden;
 }
 #interactive-container {
     height: 80vh;
@@ -102,24 +104,24 @@ hr {
     overflow: scroll;
     height: 80vh;
 
-    transition: background linear 0.5s;
+    transition: background linear 0.2s;
 }
 
 #primed-notification.loading {
-    background: rgb(220, 220, 220);
+    background: rgb(235, 235, 235);
 }
 #primed-notification:not(.loading) {
-    transition: background ease-out 0.2s;
+    transition: background ease-out 0.1s;
 }
 #primed-notification.loading2 {
     background: rgb(70, 70, 70);
 }
-.insertion-operation {
+#primed-notification>.insertion-operation {
     background: rgba(155, 255, 62, 0.322);
     border-radius: 2px;
 }
 
-.deletion-operation {
-    background: rgba(255, 90, 39, 0.322);
-    border-radius: 2px;
+#primed-notification>.deletion-operation {
+    background: rgba(255, 97, 97, 0.322);
+    border-radius: 3px;
 }
