@@ -102,11 +102,14 @@ hr {
     overflow: scroll;
     height: 80vh;
 
-    transition: background linear 0.05s;
+    transition: background linear 0.5s;
 }
 
 #primed-notification.loading {
-    background: rgb(245, 245, 245);
+    background: rgb(220, 220, 220);
+}
+#primed-notification:not(.loading) {
+    transition: background ease-out 0.2s;
 }
 #primed-notification.loading2 {
     background: rgb(70, 70, 70);
