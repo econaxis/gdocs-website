@@ -97,8 +97,8 @@ hr {
 #primed-notification {
     background: white;
     padding: 0.75em 1.25em 1.25em 0.75em;
-    border-radius: 0.5em;
-    border: 2px inset rgb(51, 51, 51);
+    border-radius: 1em;
+    border: 3px inset rgb(51, 51, 51);
 
     white-space: pre-line;
     overflow: scroll;
@@ -113,15 +113,15 @@ hr {
 #primed-notification:not(.loading) {
     transition: background ease-out 0.1s;
 }
-#primed-notification.loading2 {
-    background: rgb(70, 70, 70);
+
+#primed-notification>.insertion-operation, .deletion-operation{
+    display: inline;
 }
 #primed-notification>.insertion-operation {
     background: rgba(155, 255, 62, 0.322);
-    border-radius: 2px;
 }
 
 #primed-notification>.deletion-operation {
     background: rgba(255, 97, 97, 0.322);
-    border-radius: 3px;
+    text-decoration: line-through;
 }
