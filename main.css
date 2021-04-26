@@ -7,30 +7,36 @@ h1 {
     font-weight: bold;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    margin-top: 2em;
-    margin-bottom: 1em;
+#top > :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 1em;
+    /*margin-bottom: 1em;*/
+    padding: 0.5em;
 }
 
 #top {
     color: #f1f1f1;
     background: #191c24;
+    height: 60vh;
 }
 
 hr {
     margin-bottom: 3rem;
 }
+
 #word-count-graph {
     /* border-radius: 2px;*/
-    border: 1px inset rgb(39, 37, 37);
-    min-height:70vh;
+
+    min-height: 70vh;
     margin: 10px;
-    overflow:hidden;
+    margin-top: 0px;
+    overflow: hidden;
 }
+
+.border-container {
+    border: 1px inset rgb(39, 37, 37);
+    border-radius: 1em;
+}
+
 #interactive-container {
     height: 80vh;
 }
@@ -66,7 +72,7 @@ hr {
 
 /*Override bootstrap default transition element.*/
 #date-progress-bar > .progress-bar {
-    transition: transform 0.5s ease;
+    transition: transform 0.9s ease;
     width: 100%;
     transform-origin: left;
 }
@@ -89,6 +95,7 @@ hr {
     #main-text-readme-div > * {
         font-size: 2em;
     }
+
     #main-text-readme-div > h1 {
         font-size: 4em;
     }
@@ -97,31 +104,34 @@ hr {
 #primed-notification {
     background: white;
     padding: 0.75em 1.25em 1.25em 0.75em;
-    border-radius: 1em;
-    border: 3px inset rgb(51, 51, 51);
-
     white-space: pre-line;
     overflow: scroll;
-    height: 80vh;
+    transition: background ease-out 190ms;
+    height: 70vh;
+}
 
-    transition: background linear 0.2s;
+#document-state-alert:hover {
+    cursor: pointer;
+
 }
 
 #primed-notification.loading {
     background: rgb(235, 235, 235);
 }
+
 #primed-notification:not(.loading) {
     transition: background ease-out 0.1s;
 }
 
-#primed-notification>.insertion-operation, .deletion-operation{
+#primed-notification > .insertion-operation, .deletion-operation {
     display: inline;
 }
-#primed-notification>.insertion-operation {
+
+#primed-notification > .insertion-operation {
     background: rgba(155, 255, 62, 0.322);
 }
 
-#primed-notification>.deletion-operation {
+#primed-notification > .deletion-operation {
     background: rgba(255, 97, 97, 0.322);
     text-decoration: line-through;
 }
