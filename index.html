@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <link href="static/extern/bootstrap-5.0.0-beta3-dist/css/bootstrap.css" rel="stylesheet"/>
     <link href="main.css" rel="stylesheet"/>
-    <title>1 2 3</title>
+    <title>Time Travel Writing</title>
 </head>
 <body>
 <div class="pt-1 text-center" id="top">
@@ -61,16 +61,17 @@
         <div id="primed-notification" class="border-container"></div>
     </div>
 </div>
-<div class="row pt-3" id="bottom-buttons-container">
-    <div class="col text-center">
-        <p class="fs-3">Choose a file to view word count history.</p>
-        <button class="btn btn-primary w-25" onclick="loginCallback()">
-            Choose a file
+<div class="card" id="bottom-buttons-container" style="max-width: 70%; margin: auto">
+    <h4 class="card-header fs-2 p-4 fw-bold">Get started with your own document</h4>
+    <div class="row m-2 justify-content-center" id="buttom-buttons-container-row">
+        <button class="btn btn-primary fs-5 col p-0" onclick="loginCallback()" id="choose-file-button">
+            Choose Google Drive file
         </button>
     </div>
 </div>
+</div>
 
-<div class="mx-auto col-xl-6 col-11 mb-md-4" id="main-text-readme-div">
+<div class="mx-auto col-xl-6 col-11 my-md-4" id="main-text-readme-div">
     <h1 id="export-all-google-docs-revisions-as-a-csv-file">
         Export all Google Docs Revisions as a CSV File
     </h1>
