@@ -34,7 +34,7 @@ hr {
 
 .border-container {
     border: 1px inset rgb(39, 37, 37);
-    border-radius: 1em;
+    border-radius: 0.25em;
 }
 
 #interactive-container {

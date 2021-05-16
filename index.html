@@ -4,6 +4,7 @@
     <meta charset="UTF-8"/>
     <link href="static/extern/bootstrap-5.0.0-beta3-dist/css/bootstrap.css" rel="stylesheet"/>
     <link href="main.css" rel="stylesheet"/>
+    <base href="gdocs-export" target="_blank">
     <title>Time Travel Writing</title>
 </head>
 <body>
@@ -13,13 +14,13 @@
     <h4 class="text-center">See your word count progression over time, where you inserted text, deleted text, and when
         you wrote the most.</h4>
 </div>
-<div class="container my-5">
+<div class="container mt-5">
     <h1>Try it out with a sample document.</h1>
     <p>This is a long essay I wrote for school. Note that all words have been obfuscated to random English words for
         privacy.</p>
 </div>
 
-<div class="row mx-md-3 mx-1 my-2">
+<div class="row mx-md-3 mx-1">
     <div class="col-md-6 mt-3" id="interactive-container">
         <div class="row border-container" id="word-count-graph"></div>
         <div class="row text-center mt-4 g-0">
@@ -51,7 +52,7 @@
     The x-axis on the graph represents the progress made on the document. As you hover over each revision, the
     blue slider shows what time that revision occured at.
 </div> -->
-        <div class="alert alert-secondary p-1 fs-6 mb-2"
+        <div class="alert alert-secondary p-1 fw-bold mb-2"
              data-bs-toggle="popover" title="Usage"
              data-bs-content="Hover and hold over the left graph to view this document state at that specific timepoint.
              Green highlight means that text was added from the previous mouse-overed state. Red highlight means
@@ -61,7 +62,7 @@
         <div id="primed-notification" class="border-container"></div>
     </div>
 </div>
-<div class="card" id="bottom-buttons-container" style="max-width: 70%; margin: auto">
+<div class="card mt-4" id="bottom-buttons-container" style="max-width: 70%; margin: auto">
     <h4 class="card-header fs-2 p-4 fw-bold">Get started with your own document</h4>
     <div class="row m-2 justify-content-center" id="buttom-buttons-container-row">
         <button class="btn btn-primary fs-5 col p-0" onclick="loginCallback()" id="choose-file-button">
